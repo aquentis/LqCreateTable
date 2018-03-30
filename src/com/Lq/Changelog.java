@@ -3,10 +3,15 @@ import java.io.File;
 import java.io.IOException;
 
 public class Changelog {
-    int startValue;
-    int value;
+    public int value;
 
-    Changelog(int startValue){
-        this.startValue = startValue;
+    Changelog(int value){
+        this.value = value;
+        OpenFile(value);
     }
+    public static void OpenFile(int value) {
+        String pathName = "D:\\src\\changelog\\changelog-release-1-file-" + value + ".xml" ;
+        System.out.println(pathName);
+    }
+
 }
